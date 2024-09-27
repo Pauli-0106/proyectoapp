@@ -1,0 +1,75 @@
+<ion-header [translucent]="true">
+  <ion-toolbar style="--background: #800080;"> <!-- Color morado directo -->
+    <ion-title style="color: white;">usuario-yo</ion-title> <!-- Texto blanco en el título -->
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" style="--background: #ffffff;"> <!-- Fondo blanco -->
+  <div class="content-container" style="padding: 16px;"> <!-- Contenedor con espaciado -->
+    <ion-list>
+      <ion-item>
+        <ion-label>Sede Duoc</ion-label>
+        <ion-select style="border-radius: 10px; border: 1px solid #ccc;">
+          <ion-select-option value="opcion1">Opción 1</ion-select-option>
+          <ion-select-option value="opcion2">Opción 2</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-input placeholder="Jornada" style="border-radius: 10px; border: 1px solid #ccc;"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input placeholder="Nombre" style="border-radius: 10px; border: 1px solid #ccc;"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input placeholder="Apellido" style="border-radius: 10px; border: 1px solid #ccc;"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input type="email" placeholder="Mail" style="border-radius: 10px; border: 1px solid #ccc;"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input placeholder="WhatsApp" style="border-radius: 10px; border: 1px solid #ccc;"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input placeholder="Capacidad" style="border-radius: 10px; border: 1px solid #ccc;"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-textarea placeholder="Sobre Mí..." style="border-radius: 10px; border: 1px solid #ccc;"></ion-textarea>
+      </ion-item>
+
+      <div class="buttons-container" style="margin-top: 20px;">
+        <ion-button expand="block" style="--background: #800080; --color: white;">Guardar</ion-button>
+        <ion-button expand="block" style="--background: transparent; --border-color: #800080; --color: #800080;">Editar</ion-button>
+      </div>
+    </ion-list>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar style="--background: #800080;">
+    <ion-tabs>
+      <ion-tab-bar slot="bottom" style="--background: #800080;">
+        <ion-tab-button tab="inicio">
+          <ion-icon name="home-outline" style="color: white;"></ion-icon>
+          <ion-label style="color: white;">Inicio</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button tab="actividad">
+          <ion-icon name="list-outline" style="color: white;"></ion-icon>
+          <ion-label style="color: white;">Actividad</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button tab="cuenta">
+          <ion-icon name="person-outline" style="color: white;"></ion-icon>
+          <ion-label style="color: white;">Cuenta</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>

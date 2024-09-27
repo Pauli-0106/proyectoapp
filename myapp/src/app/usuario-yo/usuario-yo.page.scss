@@ -1,0 +1,40 @@
+.content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  ion-item {
+    --border-radius: 20px;
+    --border-width: 2px;
+    --border-color: #800080; /* Bordes morados */
+    --background: white; /* Fondo blanco */
+    --padding-start: 0;
+    --inner-padding-end: 0;
+    margin: 10px 0;
+  }
+  
+  ion-input, ion-select {
+    --padding-start: 0;
+    --padding-end: 0;
+    width: 100%;
+  }
+  
+  .buttons-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  ion-button {
+    flex-grow: 1;
+    margin: 0 10px;
+  }
+  
+  ion-list {
+    width: 100%; 
+  }
+  

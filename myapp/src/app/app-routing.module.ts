@@ -42,6 +42,14 @@ const routes: Routes = [
     path: 'ruta-yo',
     loadChildren: () => import('./ruta-yo/ruta-yo.module').then( m => m.RutaYoPageModule)
   },
+  {
+    path: 'tu-usuario',
+    loadChildren: () => import('./tu-usuario/tu-usuario.module').then( m => m.TuUsuarioPageModule)
+  },
+  {
+    path: 'usuario-yo',
+    loadChildren: () => import('./usuario-yo/usuario-yo.module').then( m => m.UsuarioYoPageModule)
+  },
 
 ];
 
