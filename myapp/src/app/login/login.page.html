@@ -1,0 +1,42 @@
+<ion-content [fullscreen]="true" class="ion-padding content-container" style="--background: #ffffff !important;">
+  <!-- Imagen del logo -->
+  <div class="logo">
+    <img src="assets/icon/logo.png" alt="Logo de la App" class="small-image"/>
+  </div>
+
+  <!-- Imagen de usuario -->
+  <div class="car-image">
+    <img src="assets/icon/usuario.png" alt="Icono de Usuario" class="small-image"/>
+  </div>
+
+  <!-- Contenedor del formulario de inicio de sesión -->
+  <div class="login-container">
+    <ion-card class="custom-card">
+      <ion-card-header>
+        <ion-card-title>Iniciar sesión</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <form>
+          <ion-item class="custom-input">
+            <ion-label position="floating">Nombre de usuario</ion-label>
+            <ion-input name="username" required></ion-input>
+          </ion-item>
+
+          <ion-item class="custom-input">
+            <ion-label position="floating">Contraseña</ion-label>
+            <ion-input name="password" type="password" required></ion-input>
+          </ion-item>
+
+          <ion-button expand="full" class="custom-button">Iniciar sesión</ion-button>
+        </form>
+
+        <ion-item lines="none">
+          <ion-label>
+            <a href="#">¿Olvidaste tu contraseña?</a>
+          </ion-label>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
