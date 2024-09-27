@@ -1,20 +1,46 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+  <ion-toolbar style="--background: #800080;"> <!-- Color morado directo -->
+    <!-- Logo en el lado izquierdo -->
+    <ion-buttons slot="start">
+      <ion-button fill="clear">
+        <img src="assets/icon/logo.png" alt="Logo" style="height: 40px; margin-left: 10px;">
+      </ion-button>
+    </ion-buttons>
+    <!-- Icono de hamburguesa en el lado derecho -->
+    <ion-buttons slot="end">
+      <ion-menu-button style="color: black;"></ion-menu-button> <!-- Icono de hamburguesa negro -->
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+<ion-content [fullscreen]="true" class="static-content" style="--background: #ffffff !important;">
+  <div class="button-container">
+    <ion-button expand="block" fill="outline" class="custom-button">
+      Yo Te Llevo
+    </ion-button>
+    <ion-button expand="block" fill="outline" class="custom-button">
+      TÚ Me Llevas
+    </ion-button>
   </div>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar style="--background: #800080;">
+    <ion-tabs>
+      <ion-tab-bar slot="bottom" style="--background: #800080;">
+        <ion-tab-button>
+          <ion-icon name="home-outline" style="color: black;"></ion-icon>
+          <ion-label style="color: black;">Inicio</ion-label>
+        </ion-tab-button>
+        <ion-tab-button>
+          <ion-icon name="list-outline" style="color: black;"></ion-icon>
+          <ion-label style="color: black;">Actividad</ion-label>
+        </ion-tab-button>
+        <ion-tab-button>
+          <ion-icon name="person-outline" style="color: black;"></ion-icon>
+          <ion-label style="color: black;">Cuenta</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>
