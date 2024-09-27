@@ -30,6 +30,18 @@ const routes: Routes = [
     path: 'dende-llevo',
     loadChildren: () => import('./dende-llevo/dende-llevo.module').then( m => m.DendeLlevoPageModule)
   },
+  {
+    path: 'donde-voy',
+    loadChildren: () => import('./donde-voy/donde-voy.module').then( m => m.DondeVoyPageModule)
+  },
+  {
+    path: 'ruta-tu',
+    loadChildren: () => import('./ruta-tu/ruta-tu.module').then( m => m.RutaTuPageModule)
+  },
+  {
+    path: 'ruta-yo',
+    loadChildren: () => import('./ruta-yo/ruta-yo.module').then( m => m.RutaYoPageModule)
+  },
 
 ];
 
