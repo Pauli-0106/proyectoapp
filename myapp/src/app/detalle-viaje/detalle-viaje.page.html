@@ -1,0 +1,48 @@
+<ion-header [translucent]="true">
+  <ion-toolbar style="--background: #800080;"> <!-- Color morado directo -->
+    <ion-buttons slot="start">
+      <ion-button fill="clear">
+        <img src="assets/icon/logo.png" alt="Logo" style="height: 40px; margin-left: 10px;">
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-menu-button style="color: black;"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding content-container" style="--background: #ffffff !important;"> <!-- Fondo blanco forzado -->
+  <div class="content-container">
+    <h2 style="text-align: center;">Escoge tu viaje</h2>
+
+    <ion-item class="custom-input">
+      <ion-input placeholder="Usuario"></ion-input>
+      <ion-icon slot="end" name="person-outline"></ion-icon>
+    </ion-item>
+
+    <ion-item class="custom-input">
+      <ion-input placeholder="Dirección"></ion-input>
+    </ion-item>
+
+    <ion-item class="custom-input">
+      <ion-label>Horarios</ion-label>
+      <ion-select interface="popover">
+        <ion-select-option value="opcion1">Opción 1</ion-select-option>
+        <ion-select-option value="opcion2">Opción 2</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item class="custom-input">
+      <ion-label>Tarifa</ion-label>
+      <ion-select interface="popover">
+        <ion-select-option value="tarifa1">Tarifa 1</ion-select-option>
+        <ion-select-option value="tarifa2">Tarifa 2</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <div class="buttons-container">
+      <ion-button expand="block" fill="outline" class="custom-button">Llévame</ion-button>
+      <ion-button expand="block" fill="outline" class="custom-button">Contacto</ion-button>
+    </div>
+  </div>
+</ion-content>
