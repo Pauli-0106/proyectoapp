@@ -26,6 +26,10 @@ const routes: Routes = [
     path: 'detalle-viaje',
     loadChildren: () => import('./detalle-viaje/detalle-viaje.module').then( m => m.DetalleViajePageModule)
   },
+  {
+    path: 'dende-llevo',
+    loadChildren: () => import('./dende-llevo/dende-llevo.module').then( m => m.DendeLlevoPageModule)
+  },
 
 ];
 
