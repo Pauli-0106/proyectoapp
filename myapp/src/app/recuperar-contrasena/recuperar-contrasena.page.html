@@ -1,0 +1,55 @@
+<ion-header [translucent]="true">
+  <ion-toolbar style="--background: #800080;"> <!-- Fondo morado -->
+    <ion-title style="color: white;">Recuperar Contraseña</ion-title> <!-- Texto blanco en el título -->
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" style="--background: #ffffff;"> <!-- Fondo blanco -->
+  <div class="content-container" style="padding: 16px;"> <!-- Contenedor con espaciado -->
+    <ion-list>
+      <ion-item lines="none">
+        <p style="color: black; text-align: center; margin-bottom: 20px;">
+          Por favor, ingresa tu dirección de correo para enviar un enlace de recuperación de contraseña.
+        </p>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label position="floating" style="color: black;">Correo Electrónico</ion-label>
+        <ion-input type="email" placeholder="correo@ejemplo.com" style="border-radius: 10px; border: 1px solid #ccc;"></ion-input>
+      </ion-item>
+      
+      <div class="buttons-container" style="margin-top: 20px;">
+        <ion-button expand="block" style="--background: #800080; --color: white;">
+          Enviar Enlace de Recuperación
+        </ion-button>
+      </div>
+      
+      <ion-item lines="none" style="text-align: center; margin-top: 20px;">
+        <p style="color: #800080; cursor: pointer;" (click)="navigateToLogin()">Volver a Inicio de Sesión</p>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar style="--background: #800080;">
+    <ion-tabs>
+      <ion-tab-bar slot="bottom" style="--background: #800080;">
+        <ion-tab-button tab="inicio">
+          <ion-icon name="home-outline" style="color: white;"></ion-icon>
+          <ion-label style="color: white;">Inicio</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button tab="actividad">
+          <ion-icon name="list-outline" style="color: white;"></ion-icon>
+          <ion-label style="color: white;">Actividad</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button tab="cuenta">
+          <ion-icon name="person-outline" style="color: white;"></ion-icon>
+          <ion-label style="color: white;">Cuenta</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>

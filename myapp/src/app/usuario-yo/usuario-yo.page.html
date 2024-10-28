@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar style="--background: #800080;"> <!-- Color morado directo -->
-    <ion-title style="color: white;">usuario-yo</ion-title> <!-- Texto blanco en el título -->
+    <ion-title style="color: black;">Registrarte</ion-title> <!-- Texto blanco en el título -->
   </ion-toolbar>
 </ion-header>
 
@@ -8,17 +8,20 @@
   <div class="content-container" style="padding: 16px;"> <!-- Contenedor con espaciado -->
     <ion-list>
       <ion-item>
-        <ion-label>Sede Duoc</ion-label>
-        <ion-select style="border-radius: 10px; border: 1px solid #ccc;">
-          <ion-select-option value="opcion1">Opción 1</ion-select-option>
-          <ion-select-option value="opcion2">Opción 2</ion-select-option>
+        <ion-label style="color: black;">Sede Duoc</ion-label>
+        <ion-select style="border-radius: 10px; border: 1px solid #ed58b2;">
+          <ion-select-option value="opcion1">Duoc San Joaquin</ion-select-option>
+          <ion-select-option value="opcion2">Duoc Puente Alto</ion-select-option>
         </ion-select>
       </ion-item>
-
       <ion-item>
-        <ion-input placeholder="Jornada" style="border-radius: 10px; border: 1px solid #ccc;"></ion-input>
+        <ion-label style="color: black;">Jornada</ion-label>
+        <ion-select style="border-radius: 10px; border: 1px solid #ed58b2;">
+          <ion-select-option value="opcion1">Diurna</ion-select-option>
+          <ion-select-option value="opcion2">Vespertina</ion-select-option>
+        </ion-select>
       </ion-item>
-
+      
       <ion-item>
         <ion-input placeholder="Nombre" style="border-radius: 10px; border: 1px solid #ccc;"></ion-input>
       </ion-item>

@@ -10,7 +10,8 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
-  },  {
+  },
+  {
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
@@ -49,6 +50,9 @@ const routes: Routes = [
   {
     path: 'usuario-yo',
     loadChildren: () => import('./usuario-yo/usuario-yo.module').then( m => m.UsuarioYoPageModule)
+  },   {
+    path: 'recuperar-contrasena',
+    loadChildren: () => import('./recuperar-contrasena/recuperar-contrasena.module').then( m => m.RecuperarContrasenaPageModule)
   },
 
 ];

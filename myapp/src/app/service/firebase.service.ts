@@ -5,22 +5,24 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
   providedIn: 'root'
 })
 export class FirebaseService {
+  constructor(private firebase: AngularFireAuth) {}
 
-  constructor(private firebase:AngularFireAuth) { }
+  async auth(email: string, password: string) {
+    const request = await this.firebase.signInWithEmailAndPassword(email, password);
+    return request;
+  }
 
-async auth (email:string, password:string){
-  const request = await this.firebase.signInWithEmailAndPassword(email,password)
-  return request
-}
-async registrar (email:string, password:string){
-  const request = await this.firebase.createUserWithEmailAndPassword(email,password)
-  return request
-}
-async recuperar (email:string){
-  const request = await this.firebase.sendPasswordResetEmail(email)
-  return request
-}
-async logOut (){
-  await this.firebase.signOut  
-}
+  async registrar(email: string, password: string) {
+    const request = await this.firebase.createUserWithEmailAndPassword(email, password);
+    return request;
+  }
+
+  async recuperar(email: string) {
+    const request = await this.firebase.sendPasswordResetEmail(email);
+    return request;
+  }
+
+  async logOut() {
+    await this.firebase.signOut();  // Asegúrate de usar () para llamar a la función
+  }
 }

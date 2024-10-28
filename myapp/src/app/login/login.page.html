@@ -31,12 +31,23 @@
           <ion-button (click)="login()"expand="full" class="custom-button">Iniciar sesión</ion-button>
         </form>
 
-        <ion-item lines="none">
-          <ion-label>
-            <a href="#">¿Olvidaste tu contraseña?</a>
-          </ion-label>
-        </ion-item>
-      </ion-card-content>
+        <div>
+          <ion-grid>
+            <ion-row>
+              <ion-col class="registrar" size="6">
+                <div>
+                  <a [routerLink]="['/usuario-yo']" router LinkActivate="router-link-activate">Registrar</a>
+                </div>
+              </ion-col>
+              <ion-col class="recuperar"size="6">
+                <div>
+                  <a [routerLink]="['/recuperar-contrasena']" router LinkActivate="router-link-activate">Recuperar</a>
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </div>
+        </ion-card-content>
     </ion-card>
   </div>
 </ion-content>
