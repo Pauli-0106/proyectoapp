@@ -31,7 +31,11 @@
       </ion-item>
 
       <ion-item>
-        <ion-input type="email" placeholder="Mail" style="border-radius: 10px; border: 1px solid #ccc;"></ion-input>
+        <ion-input [(ngModel)]="email" type="email" placeholder="Mail" style="border-radius: 10px; border: 1px solid #ccc;"></ion-input>
+      </ion-item>
+      <ion-item>
+
+        <ion-input [(ngModel)]="password" type="password" placeholder="Password" style="border-radius: 10px; border: 1px solid #ccc;"></ion-input>
       </ion-item>
 
       <ion-item>
@@ -47,7 +51,7 @@
       </ion-item>
 
       <div class="buttons-container" style="margin-top: 20px;">
-        <ion-button expand="block" style="--background: #800080; --color: white;">Guardar</ion-button>
+        <ion-button  (click)=" registrar()" expand="block" style="--background: #800080; --color: white;">Guardar</ion-button>
         <ion-button expand="block" style="--background: transparent; --border-color: #800080; --color: #800080;">Editar</ion-button>
       </div>
     </ion-list>

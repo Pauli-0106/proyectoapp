@@ -8,15 +8,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./usuario-yo.page.scss'],
 })
 export class UsuarioYoPage implements OnInit {
-  email = "";
-  password = "";
+email = "";
+password = "";
 
 
   constructor(private firebase:FirebaseService, private router:Router) { }
 
   ngOnInit() {
 }
-async login() {
+async registrar() {
     let usuario = await this.firebase.registrar(this.email, this.password);
     console.log(usuario);
     this.router.navigateByUrl("login");

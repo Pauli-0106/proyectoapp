@@ -15,11 +15,11 @@
       
       <ion-item>
         <ion-label position="floating" style="color: black;">Correo Electrónico</ion-label>
-        <ion-input type="email" placeholder="correo@ejemplo.com" style="border-radius: 10px; border: 1px solid #ccc;"></ion-input>
+        <ion-input [(ngModel)]="email" type="email" placeholder="correo@ejemplo.com" style="border-radius: 10px; border: 1px solid #ccc;"></ion-input>
       </ion-item>
       
       <div class="buttons-container" style="margin-top: 20px;">
-        <ion-button expand="block" style="--background: #800080; --color: white;">
+        <ion-button  (click)="recuperar()" expand="block" style="--background: #800080; --color: white;">
           Enviar Enlace de Recuperación
         </ion-button>
       </div>
