@@ -1,11 +1,17 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from '@angular/core'; 
 import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FirebaseService {
   constructor(private firebase: AngularFireAuth) {}
+
+  // Método para obtener el estado de autenticación
+  getAuthState(): Observable<any> {
+    return this.firebase.authState;
+  }
 
   async auth(email: string, password: string) {
     const request = await this.firebase.signInWithEmailAndPassword(email, password);
