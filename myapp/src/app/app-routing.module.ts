@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './auth/auth.guard'; 
 import { AngularFireAuthGuard, redirectUnauthorizedTo } from '@angular/fire/compat/auth-guard';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const redireccionarLogin = () => redirectUnauthorizedTo(['/login'])
 
@@ -70,6 +71,9 @@ const routes: Routes = [
     path: 'recuperar-contrasena',
     loadChildren: () => import('./recuperar-contrasena/recuperar-contrasena.module').then(m => m.RecuperarContrasenaPageModule)
   },
+  { path: '**',
+    component: PageNotFoundComponent
+  }
 ];
 
 @NgModule({
