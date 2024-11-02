@@ -1,3 +1,38 @@
+<!-- app.component.html -->
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <!-- Menú Lateral -->
+  <ion-menu side="end" menuId="main-menu" contentId="main-content">
+    <ion-header>
+      <ion-toolbar style="--background: #800080;">
+        <ion-title style="color: black;">Menú</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+      <ion-list>
+        <!-- Información del usuario -->
+        <ion-item>
+          <ion-label>
+            <h2 style="color: black;">Usuario</h2>
+            <p style="color: black;">{{ email }}</p>
+          </ion-label>
+        </ion-item>
+
+        <!-- Opción de Perfil -->
+        <ion-item button (click)="goToProfile()">
+          <ion-icon name="person-outline" slot="start"></ion-icon>
+          <ion-label>Perfil</ion-label>
+        </ion-item>
+
+        <!-- Botón de Cerrar Sesión -->
+        <ion-item button (click)="logout()">
+          <ion-icon name="log-out-outline" slot="start"></ion-icon>
+          <ion-label>Cerrar Sesión</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <!-- Contenido Principal -->
+  <ion-router-outlet id="main-content"></ion-router-outlet>
 </ion-app>

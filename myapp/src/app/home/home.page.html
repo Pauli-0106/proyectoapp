@@ -1,19 +1,53 @@
+<ion-menu side="end" content-id="main-content">
+  <ion-header>
+    <ion-toolbar style="--background: #800080;">
+      <ion-title style="color: black;">Menú</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+      <!-- Información del usuario -->
+      <ion-item>
+        <ion-label>
+          <h2 style="color: black;">Usuario</h2>
+          <p style="color: black;">{{ email }}</p>
+        </ion-label>
+      </ion-item>
+
+      <!-- Opción de Perfil -->
+      <ion-item button (click)="goToProfile()">
+        <ion-icon name="person-outline" slot="start"></ion-icon>
+        <ion-label>Perfil</ion-label>
+      </ion-item>
+
+      <!-- Botón de Cerrar Sesión -->
+      <ion-item button (click)="logout()">
+        <ion-icon name="log-out-outline" slot="start"></ion-icon>
+        <ion-label>Cerrar Sesión</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+
 <ion-header [translucent]="true">
-  <ion-toolbar style="--background: #800080;"> <!-- Color morado directo -->
-    <!-- Logo en el lado izquierdo -->
+  <ion-toolbar style="--background: #800080;"> 
     <ion-buttons slot="start">
       <ion-button fill="clear">
         <img src="assets/icon/logo.png" alt="Logo" style="height: 40px; margin-left: 10px;">
       </ion-button>
     </ion-buttons>
-    <!-- Icono de hamburguesa en el lado derecho -->
     <ion-buttons slot="end">
-      <ion-menu-button style="color: black;"></ion-menu-button> <!-- Icono de hamburguesa negro -->
+      <ion-menu-button style="color: black;display: block;"></ion-menu-button> 
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true" class="static-content" style="--background: #ffffff !important;">
+  <div *ngIf="email">
+    <p style=" color: black;padding: 10px;">Bienvenido: {{email}}</p>
+  </div>
   <div class="button-container">
     <ion-button expand="block" fill="outline" class="custom-button">
       Yo Te Llevo

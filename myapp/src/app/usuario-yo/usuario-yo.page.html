@@ -1,8 +1,17 @@
 <ion-header [translucent]="true">
   <ion-toolbar style="--background: #800080;"> <!-- Color morado directo -->
-    <ion-title style="color: black;">Registrarte</ion-title> <!-- Texto blanco en el título -->
+    <ion-buttons slot="start"> <!-- Botones a la izquierda -->
+      <ion-button fill="clear">
+        <img src="assets/icon/logo.png" alt="Logo" style="height: 40px; margin-left: 10px;">
+      </ion-button>
+    </ion-buttons>
+    <ion-title style="color: black;">Registrarte</ion-title> <!-- Texto negro en el título -->
+    <ion-buttons slot="end"> <!-- Botones a la derecha -->
+      <ion-menu-button style="color: black; display: block;"></ion-menu-button> <!-- Icono de hamburguesa negro -->
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
+
 
 <ion-content [fullscreen]="true" style="--background: #ffffff;"> <!-- Fondo blanco -->
   <div class="content-container" style="padding: 16px;"> <!-- Contenedor con espaciado -->

@@ -1,14 +1,17 @@
 <ion-header [translucent]="true">
-  <ion-toolbar style="--background: #800080;"> <!-- Fondo morado -->
-    <ion-title style="color: white;">Recuperar Contraseña</ion-title> <!-- Texto blanco en el título -->
+  <ion-toolbar style="--background: #800080;"> 
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title style="color: white;">Recuperar Contraseña</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true" style="--background: #ffffff;"> <!-- Fondo blanco -->
-  <div class="content-container" style="padding: 16px;"> <!-- Contenedor con espaciado -->
+<ion-content [fullscreen]="true" style="--background: #ffffff;"> 
+  <div class="content-container" style="padding: 16px;"> 
     <ion-list>
       <ion-item lines="none">
-        <p style="color: black; text-align: center; margin-bottom: 20px;">
+        <p style="color: rgb(255, 244, 244); text-align: center; margin-bottom: 20px;">
           Por favor, ingresa tu dirección de correo para enviar un enlace de recuperación de contraseña.
         </p>
       </ion-item>
@@ -24,9 +27,7 @@
         </ion-button>
       </div>
       
-      <ion-item lines="none" style="text-align: center; margin-top: 20px;">
-        <p style="color: #800080; cursor: pointer;" (click)="navigateToLogin()">Volver a Inicio de Sesión</p>
-      </ion-item>
+      
     </ion-list>
   </div>
 </ion-content>

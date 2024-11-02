@@ -13,11 +13,12 @@ export class AuthGuard implements CanActivate {
   canActivate() {
     return this.firebaseService.getAuthState().pipe(
       map(user => {
+        console.log('Estado de autenticación:', user);
         if (user) {
-          return true; // Usuario autenticado
+          return true; 
         } else {
-          this.router.navigate(['/login']); // Redirigir a la página de inicio de sesión
-          return false; // Usuario no autenticado
+          this.router.navigate(['/login']); 
+          return false; 
         }
       })
     );
