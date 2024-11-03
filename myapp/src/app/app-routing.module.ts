@@ -15,7 +15,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'login', // Redirigir a la página de inicio de sesión en lugar de home
+    redirectTo: 'login', 
     pathMatch: 'full'
   },
   {
@@ -25,47 +25,47 @@ const routes: Routes = [
   {
     path: 'principal',
     loadChildren: () => import('./principal/principal.module').then(m => m.PrincipalPageModule),
-    canActivate: [AuthGuard] // Protección de la ruta principal
+    canActivate: [AuthGuard] 
   },
   {
     path: 'actividad',
     loadChildren: () => import('./actividad/actividad.module').then(m => m.ActividadPageModule),
-    canActivate: [AuthGuard] // Protección de la ruta actividad
+    canActivate: [AuthGuard] 
   },
   {
     path: 'detalle-viaje',
     loadChildren: () => import('./detalle-viaje/detalle-viaje.module').then(m => m.DetalleViajePageModule),
-    canActivate: [AuthGuard] // Protección de la ruta detalle-viaje
+    canActivate: [AuthGuard] 
   },
   {
     path: 'dende-llevo',
     loadChildren: () => import('./dende-llevo/dende-llevo.module').then(m => m.DendeLlevoPageModule),
-    canActivate: [AuthGuard] // Protección de la ruta dende-llevo
+    canActivate: [AuthGuard] 
   },
   {
     path: 'donde-voy',
     loadChildren: () => import('./donde-voy/donde-voy.module').then(m => m.DondeVoyPageModule),
-    canActivate: [AuthGuard] // Protección de la ruta donde-voy
+    canActivate: [AuthGuard] 
   },
   {
     path: 'ruta-tu',
     loadChildren: () => import('./ruta-tu/ruta-tu.module').then(m => m.RutaTuPageModule),
-    canActivate: [AuthGuard] // Protección de la ruta ruta-tu
+    canActivate: [AuthGuard] 
   },
   {
     path: 'ruta-yo',
     loadChildren: () => import('./ruta-yo/ruta-yo.module').then(m => m.RutaYoPageModule),
-    canActivate: [AuthGuard] // Protección de la ruta ruta-yo
+    canActivate: [AuthGuard] 
   },
   {
     path: 'tu-usuario',
     loadChildren: () => import('./tu-usuario/tu-usuario.module').then(m => m.TuUsuarioPageModule),
-    canActivate: [AuthGuard] // Protección de la ruta tu-usuario
+    canActivate: [AuthGuard]
   },
   {
     path: 'usuario-yo',
     loadChildren: () => import('./usuario-yo/usuario-yo.module').then(m => m.UsuarioYoPageModule),
-    canActivate: [AuthGuard] // Protección de la ruta usuario-yo
+    
   },
   {
     path: 'recuperar-contrasena',
@@ -73,7 +73,11 @@ const routes: Routes = [
   },
   { path: '**',
     component: PageNotFoundComponent
+  },  {
+    path: 'apitest',
+    loadChildren: () => import('./apitest/apitest.module').then( m => m.ApitestPageModule)
   }
+
 ];
 
 @NgModule({

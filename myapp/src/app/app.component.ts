@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { FirebaseService } from '../app/service/firebase.service'; // Asegúrate de que la ruta al servicio sea correcta
+import { FirebaseService } from '../app/service/firebase.service'; 
 
 @Component({
   selector: 'app-root',
@@ -10,17 +10,17 @@ import { FirebaseService } from '../app/service/firebase.service'; // Asegúrate
 export class AppComponent {
   email: string | null = '1133@1133.com';
 
-  constructor(private router: Router, private firebaseService: FirebaseService) {}  // Inyecta el servicio aquí
+  constructor(private router: Router, private firebaseService: FirebaseService) {} 
 
   goToProfile() {
     this.router.navigate(['/profile']); 
   }
 
   logout() {
-    this.firebaseService.logOut().then(() => {  // Usa firebaseService sin errores
+    this.firebaseService.logOut().then(() => { 
       console.log("Usuario ha cerrado sesión");
       this.router.navigate(['/login']);
-    }).catch((error: any) => {  // Especifica el tipo 'any' para evitar el error de TypeScript
+    }).catch((error: any) => { 
       console.error("Error al cerrar sesión:", error);
     });
   }

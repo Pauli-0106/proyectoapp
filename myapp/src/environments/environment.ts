@@ -13,6 +13,7 @@ export const environment = {
     appId: "1:502082327154:web:3cad06695189e3753c68eb",
     measurementId: "G-NF96RLLG9W"
   },
+  apiUrl:"https://uber-nodejs-server-git-d61f89-guillermovillacuratorres-projects.vercel.app/api/"
 };
 
 /*

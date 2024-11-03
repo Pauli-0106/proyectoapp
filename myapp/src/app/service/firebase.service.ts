@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 export class FirebaseService {
   constructor(private firebase: AngularFireAuth) {}
 
-  // Método para obtener el estado de autenticación
+  
   getAuthState(): Observable<any> {
     return this.firebase.authState;
   }
@@ -29,6 +29,6 @@ export class FirebaseService {
   }
 
   async logOut() {
-    await this.firebase.signOut();  // Asegúrate de usar () para llamar a la función
+    await this.firebase.signOut();  
   }
 }

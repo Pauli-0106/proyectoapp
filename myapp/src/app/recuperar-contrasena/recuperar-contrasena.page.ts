@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { FirebaseService } from 'src/app/service/firebase.service'; // Asegúrate de que la ruta sea correcta
+import { FirebaseService } from 'src/app/service/firebase.service'; 
 
 @Component({
   selector: 'app-recuperar-contrasena',
@@ -11,17 +11,17 @@ export class RecuperarContrasenaPage {
   email = "";
   password = "";
 
-  constructor(private firebase: FirebaseService, private router: Router) {} // Corrección del tipo de servicio y de router
+  constructor(private firebase: FirebaseService, private router: Router) {} 
 
   navigateToLogin() {
-    this.router.navigate(['/login']); // Redirige a la ruta de inicio de sesión
+    this.router.navigate(['/login']); 
   }
 
   async recuperar() {
     try {
-      const usuario = await this.firebase.recuperar(this.email); // Corregí la llamada y cerré el paréntesis
+      const usuario = await this.firebase.recuperar(this.email); 
       console.log(usuario);
-      this.router.navigateByUrl('/login'); // Redirige a la ruta de inicio de sesión
+      this.router.navigateByUrl('/login');
     } catch (error) {
       console.error("Error al recuperar contraseña:", error);
     }

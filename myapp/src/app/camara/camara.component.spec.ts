@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { RecuperarcontrasenamodalComponent } from './recuperarcontrasenamodal.component';
+import { CamaraComponent } from './camara.component';
 
-describe('RecuperarcontrasenamodalComponent', () => {
-  let component: RecuperarcontrasenamodalComponent;
-  let fixture: ComponentFixture<RecuperarcontrasenamodalComponent>;
+describe('CamaraComponent', () => {
+  let component: CamaraComponent;
+  let fixture: ComponentFixture<CamaraComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ RecuperarcontrasenamodalComponent ],
+      declarations: [ CamaraComponent ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(RecuperarcontrasenamodalComponent);
+    fixture = TestBed.createComponent(CamaraComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));

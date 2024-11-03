@@ -1,42 +1,22 @@
 <ion-header [translucent]="true">
-  <ion-toolbar style="--background: #800080;"> <!-- Color morado directo -->
-    <ion-buttons slot="start"> <!-- Botones a la izquierda -->
+  <ion-toolbar style="--background: #800080;"> 
+    <ion-buttons slot="start"> 
+      <ion-back-button defaultHref="/login" style="color: white;"></ion-back-button> 
       <ion-button fill="clear">
         <img src="assets/icon/logo.png" alt="Logo" style="height: 40px; margin-left: 10px;">
       </ion-button>
     </ion-buttons>
-    <ion-title style="color: black;">Registrarte</ion-title> <!-- Texto negro en el título -->
-    <ion-buttons slot="end"> <!-- Botones a la derecha -->
-      <ion-menu-button style="color: black; display: block;"></ion-menu-button> <!-- Icono de hamburguesa negro -->
-    </ion-buttons>
+    <ion-title style="color: black;">Registrarte</ion-title> 
   </ion-toolbar>
 </ion-header>
 
 
-<ion-content [fullscreen]="true" style="--background: #ffffff;"> <!-- Fondo blanco -->
-  <div class="content-container" style="padding: 16px;"> <!-- Contenedor con espaciado -->
+<ion-content [fullscreen]="true" style="--background: #ffffff;"> 
+  <div class="content-container" style="padding: 16px;"> 
     <ion-list>
-      <ion-item>
-        <ion-label style="color: black;">Sede Duoc</ion-label>
-        <ion-select style="border-radius: 10px; border: 1px solid #ed58b2;">
-          <ion-select-option value="opcion1">Duoc San Joaquin</ion-select-option>
-          <ion-select-option value="opcion2">Duoc Puente Alto</ion-select-option>
-        </ion-select>
-      </ion-item>
-      <ion-item>
-        <ion-label style="color: black;">Jornada</ion-label>
-        <ion-select style="border-radius: 10px; border: 1px solid #ed58b2;">
-          <ion-select-option value="opcion1">Diurna</ion-select-option>
-          <ion-select-option value="opcion2">Vespertina</ion-select-option>
-        </ion-select>
-      </ion-item>
       
       <ion-item>
         <ion-input placeholder="Nombre" style="border-radius: 10px; border: 1px solid #ccc;"></ion-input>
-      </ion-item>
-
-      <ion-item>
-        <ion-input placeholder="Apellido" style="border-radius: 10px; border: 1px solid #ccc;"></ion-input>
       </ion-item>
 
       <ion-item>
@@ -50,18 +30,15 @@
       <ion-item>
         <ion-input placeholder="WhatsApp" style="border-radius: 10px; border: 1px solid #ccc;"></ion-input>
       </ion-item>
-
-      <ion-item>
-        <ion-input placeholder="Capacidad" style="border-radius: 10px; border: 1px solid #ccc;"></ion-input>
-      </ion-item>
-
-      <ion-item>
-        <ion-textarea placeholder="Sobre Mí..." style="border-radius: 10px; border: 1px solid #ccc;"></ion-textarea>
-      </ion-item>
-
+      <div class="profile-pic-container" style="text-align: center; margin-bottom: 20px;">
+        <img [src]="profileImage" *ngIf="profileImage" alt="Imagen de perfil" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover;">
+        <ion-button expand="block" (click)="selectImage()" style="--background: #800080; color: white; margin-top: 10px;">
+          Subir Imagen de Perfil
+        </ion-button>
+        <input type="file" accept="image/*" #fileInput hidden (change)="onFileSelected($event)">
+      </div>
       <div class="buttons-container" style="margin-top: 20px;">
         <ion-button  (click)=" registrar()" expand="block" style="--background: #800080; --color: white;">Guardar</ion-button>
-        <ion-button expand="block" style="--background: transparent; --border-color: #800080; --color: #800080;">Editar</ion-button>
       </div>
     </ion-list>
   </div>
